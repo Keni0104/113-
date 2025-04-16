@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btn_store_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 顯示已選主餐 -->
+    <TextView
+        android:id="@+id/tv_main_dish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主餐：未點"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 顯示已選副餐 -->
+    <TextView
+        android:id="@+id/tv_side_dish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="副餐：未點"
+        app:layout_constraintTop_toBottomOf="@id/tv_main_dish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 按鈕：點主餐 -->
+    <Button
+        android:id="@+id/btn_main_dish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="點主餐"
+        app:layout_constraintTop_toBottomOf="@id/tv_side_dish"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- 按鈕：點副餐 -->
+    <Button
+        android:id="@+id/btn_side_dish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="點副餐"
+        app:layout_constraintTop_toBottomOf="@id/tv_side_dish"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 按鈕：店家訊息 (更新原有 btn_store_info) -->
+    <Button
+        android:id="@+id/btn_store_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="店家訊息"
+        app:layout_constraintTop_toBottomOf="@id/btn_main_dish"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
